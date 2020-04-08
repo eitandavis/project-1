@@ -1,5 +1,7 @@
 # CIT 281 Project 1
+[My CIT 281 Website](https://pages.uoregon.edu/edavis9/281/)
 
+![Octobi Wan Catnobi](/images/OctobiWan.jpeg)
 ## Learning Objectives
 
 - Basic Unix Shell commands
