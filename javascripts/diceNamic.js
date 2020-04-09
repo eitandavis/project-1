@@ -5,12 +5,43 @@ let rollDie = () => {
 };
 
 //Define a controller to handle the button click
-let controller = function() {
+let controller = () => {
+  let target, die1, die2, rollCount = 0, die1URL, die2URL, imgElem1, imgElem2, cheeryOutput;
 
-  //Processing: assemble the result string
-  //use <br> in the result string for html newline
+//get the target number from webpage
+target = document.querySelector("input").value;
+console.log(target);
 
-  //Output: write the result string into the empty div
+//roll the target number (and count the rolls)
+
+do{
+  //roll the dice
+die1 = rollDie();
+die2 = rollDie();
+
+  //increment the roll counter
+rollCount += 1;
+
+  //log the dice and counter
+console.log(`d1=${die1} d2=${die2} ${rollCount}`);
+
+} while (die1 + die2 != target);
+
+//update images on web page
+die1URL = `images/die${die1}.gif`;
+console.log(die1URL);
+imgElem1 = document.querySelector("img");
+imgElem1.setAttribute("src", die1URL);
+
+die2URL = `images/die${die2}.gif`;
+console.log(die2URL);
+imgElem2 = document.querySelectorAll("img")[1];
+imgElem2.setAttribute("src", die2URL);
+
+//display number of rolls on web page
+cheeryOutput = `You hit your number in ${rollCount} roll${(rollCount == 1)?"":"s"}!`;
+document.querySelector("div").innerHTML = cheeryOutput;
+
 };
 
 //Register the controller after the DOM is complete
