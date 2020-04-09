@@ -39,5 +39,7 @@ let sumEvens = arr => {
 
 //XC 3E
 function alphaPosition(ch) {
-  
+  let str = "";
+
+  str.charCodeAt(i);
 }
