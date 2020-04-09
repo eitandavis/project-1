@@ -28,10 +28,16 @@ let arrMax = arr => {
 //Req. 3D
 let sumEvens = arr => {
   let sum = 0;
-  for (var i = 0; i < arr.length; i++) {
-    if (i % 2 === 0) {
-      sum += i;
+
+  for (var elem of arr) {
+    if (elem % 2 == 0) {
+      sum += elem;
     }
   }
-    return sum;
+  return sum;
 };
+
+//XC 3E
+function alphaPosition(ch) {
+  
+}
